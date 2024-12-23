@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>TechVision - Future of Technology</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts (Optional) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Style (Optional for extra animations) -->
+    <style>
+      body {
+        font-family: "Prompt", sans-serif;
+      }
+      /* Fade-in animation (custom) */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <header class="bg-blue-900 text-white shadow-lg">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-4"
+      >
+        <!-- Logo / Brand -->
+        <a
+          href="#"
+          class="text-2xl md:text-3xl font-bold tracking-wide hover:text-gray-200 transition-colors"
+        >
+          TechVision
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a
+            href="#home"
+            class="hover:text-gray-200 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="hover:text-gray-200 transition-colors"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="hover:text-gray-200 transition-colors"
+            >Services</a
+          >
+          <a
+            href="#features"
+            class="hover:text-gray-200 transition-colors"
+            >Features</a
+          >
+          <a
+            href="#pricing"
+            class="hover:text-gray-200 transition-colors"
+            >Pricing</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-gray-200 transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden bg-blue-800 text-white py-2 hidden transition-all"
+      >
+        <div class="container mx-auto flex flex-col space-y-2 px-4 fade-in">
+          <a href="#home" class="hover:bg-blue-900 px-2 py-1 rounded"
+            >Home</a
+          >
+          <a href="#about" class="hover:bg-blue-900 px-2 py-1 rounded"
+            >About</a
+          >
+          <a href="#services" class="hover:bg-blue-900 px-2 py-1 rounded"
+            >Services</a
+          >
+          <a href="#features" class="hover:bg-blue-900 px-2 py-1 rounded"
+            >Features</a
+          >
+          <a href="#pricing" class="hover:bg-blue-900 px-2 py-1 rounded"
+            >Pricing</a
+          >
+          <a href="#contact" class="hover:bg-blue-900 px-2 py-1 rounded"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative flex items-center justify-center bg-cover bg-center bg-no-repeat h-[90vh]"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+      "
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <!-- Content -->
+      <div class="relative z-10 text-center text-white px-4 fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
+          Driving Innovation Forward
+        </h1>
+        <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          เราผสานเทคโนโลยีอันล้ำสมัยเข้ากับไอเดียสร้างสรรค์
+          เพื่อให้ธุรกิจของคุณสามารถแข่งขันและเติบโตได้อย่างยั่งยืน
+        </p>
+        <a
+          href="#about"
+          class="inline-block bg-blue-700 hover:bg-blue-600 transition-colors px-8 py-3 rounded-full text-lg font-semibold"
+        >
+          Learn More
+        </a>
+      </div>
+      <!-- Scroll Down Indicator (Optional) -->
+      <div class="absolute bottom-6 inset-x-0 text-center">
+        <span class="text-white animate-bounce">▼</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto mt-16 px-4">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          About TechVision
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          TechVision เป็นบริษัทเทคโนโลยีที่มุ่งมั่นสร้างสรรค์โซลูชัน
+          และนวัตกรรมใหม่ ๆ เพื่อช่วยให้ธุรกิจทุกรูปแบบสามารถพัฒนา
+          และปรับตัวเข้าสู่ยุคดิจิทัลได้อย่างรวดเร็วและมีประสิทธิภาพ
+          เราพร้อมสนับสนุนตั้งแต่การวางแผน พัฒนา
+          ไปจนถึงการบริหารจัดการระบบครบวงจร
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in">
+        <!-- Card 1 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-4">
+            <svg
+              class="w-12 h-12 text-blue-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-4h2v2h-2v-2zm0-8h2v6h-2V6z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Mission</h3>
+          <p class="text-gray-600">
+            มุ่งเน้นการพัฒนาโซลูชันระดับโลกด้วยเทคโนโลยี
+            และความคิดสร้างสรรค์เพื่อนำพาลูกค้าสู่ความสำเร็จ
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-4">
+            <svg
+              class="w-12 h-12 text-blue-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10.293 1.293a1 1 0 011.414 0l7 7a1 1 0 01-.143 1.538l-8 6a1 1 0 01-1.242 0l-8-6A1 1 0 011.293 8.293l7-7z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Vision</h3>
+          <p class="text-gray-600">
+            ต้องการเป็นผู้นำด้านเทคโนโลยีในระดับสากล
+            โดยมุ่งมั่นสร้างมูลค่าและโอกาสทางธุรกิจอย่างต่อเนื่อง
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div class="flex items-center justify-center mb-4">
+            <svg
+              class="w-12 h-12 text-blue-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10.707 15.293a1 1 0 01-1.414 0L6 12.414V6a2 2 0 114 0v5.586l3.707 2.879z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Core Values</h3>
+          <p class="text-gray-600">
+            เราให้ความสำคัญกับคุณภาพ ความโปร่งใส
+            และการพัฒนาบุคลากรอย่างต่อเนื่อง เพื่อสร้างทีมงานที่แข็งแกร่ง
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto mt-16 px-4">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Our Services
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          เราให้บริการครอบคลุมทุกด้านของการพัฒนาและจัดการระบบเทคโนโลยี
+          ตั้งแต่การวางแผน พัฒนา ไปจนถึงการดูแลหลังการใช้งาน
+          เพื่อช่วยให้ธุรกิจของคุณขับเคลื่อนไปได้อย่างต่อเนื่องและยั่งยืน
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+        <!-- Service 1 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
+        >
+          <img
+            src="Software.jpg"
+            alt="Software Development"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl font-bold mt-4">Software Development</h3>
+          <p class="text-gray-600 mt-2">
+            ออกแบบและพัฒนาซอฟต์แวร์ที่เชื่อถือได้
+            ด้วยเทคโนโลยีที่ทันสมัยและมาตรฐานสากล
+          </p>
+        </div>
+        <!-- Service 2 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80"
+            alt="Cloud Integration"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl font-bold mt-4">Cloud Integration</h3>
+          <p class="text-gray-600 mt-2">
+            เชื่อมต่อระบบธุรกิจของคุณสู่ Cloud Infrastructure
+            เพื่อยกระดับประสิทธิภาพและความยืดหยุ่น
+          </p>
+        </div>
+        <!-- Service 3 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
+        >
+          <img
+            src="AI.jpg"
+            alt="AI & Machine Learning"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl font-bold mt-4">AI & Machine Learning</h3>
+          <p class="text-gray-600 mt-2">
+            นำข้อมูลมาวิเคราะห์ด้วย AI เพื่อสร้างกลยุทธ์และมุมมองใหม่ ๆ
+            ทางธุรกิจ
+          </p>
+        </div>
+        <!-- Service 4 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
+        >
+          <img
+            src="Cybersecurity.jpg"
+            alt="Cybersecurity"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl font-bold mt-4">Cybersecurity</h3>
+          <p class="text-gray-600 mt-2">
+            ปกป้องธุรกิจของคุณด้วยมาตรการรักษาความปลอดภัยระดับสูง
+            และเทคโนโลยีการป้องกันการโจมตีที่ทันสมัย
+          </p>
+        </div>
+        <!-- Service 5 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
+        >
+          <img
+            src="IT Consulting.jpg"
+            alt="IT Consulting"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl font-bold mt-4">IT Consulting</h3>
+          <p class="text-gray-600 mt-2">
+            วิเคราะห์ และให้คำปรึกษาด้านไอทีเชิงกลยุทธ์
+            เพื่อผลักดันธุรกิจของคุณสู่ความสำเร็จ
+          </p>
+        </div>
+        <!-- Service 6 -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
+        >
+          <img
+            src="Data Analytics.jpg"
+            alt="Data Analytics"
+            class="w-full h-48 object-cover rounded-t-lg"
+          />
+          <h3 class="text-xl font-bold mt-4">Data Analytics</h3>
+          <p class="text-gray-600 mt-2">
+            สร้างมูลค่าจากข้อมูลด้วยการวิเคราะห์เชิงลึก
+            และโมเดลการทำนายแนวโน้มในอนาคต
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto mt-16 px-4">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Key Features
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          เรามีจุดเด่นหลายประการที่ช่วยให้โซลูชันของเราทำงานได้มีประสิทธิภาพ
+          และสร้างความแตกต่างอย่างแท้จริง
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
+        <!-- Feature 1 -->
+        <div class="bg-blue-100 rounded-lg p-6 flex items-start space-x-4">
+          <svg
+            class="w-12 h-12 text-blue-600 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M2 5a2 2 0 012-2h2a2 2 0 012 2v3h2V5a2 2 0 114 0v3h2V5a2 2 0 114 0v10a2 2 0 01-2 2h-2a2 2 0 01-2-2v-3h-2v3a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"
+            />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Modular Architecture</h3>
+            <p class="text-gray-600">
+              ออกแบบระบบเป็นโมดูลแยกส่วน
+              ทำให้การบำรุงรักษาและการต่อยอดฟังก์ชันเป็นไปได้ง่าย
+            </p>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-blue-100 rounded-lg p-6 flex items-start space-x-4">
+          <svg
+            class="w-12 h-12 text-blue-600 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M5 8l1 10h8l1-10H5z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M7 2h6a2 2 0 012 2v2H5V4a2 2 0 012-2zm8 4V4a4 4 0 00-8 0v2h8z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Advanced Security</h3>
+            <p class="text-gray-600">
+              มีระบบตรวจสอบช่องโหว่แบบเรียลไทม์และการเข้ารหัสข้อมูลหลายชั้น
+              เพื่อรักษาความปลอดภัยสูงสุด
+            </p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-blue-100 rounded-lg p-6 flex items-start space-x-4">
+          <svg
+            class="w-12 h-12 text-blue-600 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M2 10c0-4.418 3.582-8 8-8s8 3.582 8 8a7.99 7.99 0 01-1.343 4.39 1 1 0 11-1.651-1.16A5.992 5.992 0 0016 10c0-3.309-2.691-6-6-6S4 6.691 4 10c0 2.094 1.07 3.94 2.699 5.03.262.175.59.195.857.052l.188-.094A6.006 6.006 0 0110 16c1.54 0 2.94-.581 4-1.536V15a1 1 0 002 0v-2.105a7.975 7.975 0 002-2.52C18 9.339 18 9.169 18 9a8.064 8.064 0 00-.793-3.607A7.975 7.975 0 0010 2c-4.418 0-8 3.582-8 8z"
+            />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">AI-Driven Insights</h3>
+            <p class="text-gray-600">
+              ใช้ประโยชน์จากปัญญาประดิษฐ์
+              เพื่อวิเคราะห์ข้อมูลเชิงลึกและการคาดการณ์เทรนด์ต่าง ๆ
+            </p>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-blue-100 rounded-lg p-6 flex items-start space-x-4">
+          <svg
+            class="w-12 h-12 text-blue-600 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M17 4H3a1 1 0 00-1 1v2a1 1 0 001 1h14a1 1 0 001-1V5a1 1 0 00-1-1zm0 8H3a1 1 0 00-1 1v2a1 1 0 001 1h14a1 1 0 001-1v-2a1 1 0 00-1-1z"
+            />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Scalable Infrastructure</h3>
+            <p class="text-gray-600">
+              โครงสร้างระบบที่รองรับการขยายได้ตามความต้องการ
+              ไม่ว่าธุรกิจคุณจะเติบโตมากแค่ไหน
+            </p>
+          </div>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-blue-100 rounded-lg p-6 flex items-start space-x-4">
+          <svg
+            class="w-12 h-12 text-blue-600 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M13 7H7v6h6V7z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2c3.309 0 6-2.691 6-6a6 6 0 00-12 0c0 3.309 2.691 6 6 6z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">24/7 Monitoring</h3>
+            <p class="text-gray-600">
+              ระบบเฝ้าดูแลเซิร์ฟเวอร์และเครือข่ายแบบเรียลไทม์ ตลอด 24 ชั่วโมง
+            </p>
+          </div>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-blue-100 rounded-lg p-6 flex items-start space-x-4">
+          <svg
+            class="w-12 h-12 text-blue-600 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M17 8V6a3 3 0 00-3-3H6a3 3 0 00-3 3v2m6 1H9a1 1 0 00-1 1v3m4-4h1a1 1 0 011 1v3m-4 0h4"
+            />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">User-Friendly Interface</h3>
+            <p class="text-gray-600">
+              เน้นออกแบบ UI/UX ที่ใช้งานง่าย
+              ช่วยเพิ่มประสบการณ์ที่ดีให้กับผู้ใช้งาน
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="container mx-auto mt-16 px-4">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Pricing Plans
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          เลือกแพ็คเกจที่เหมาะสมกับธุรกิจของคุณ
+          ด้วยคุณสมบัติที่ครอบคลุมและสามารถปรับแต่งได้ตามความต้องการ
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+        <!-- Basic Plan -->
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+          <h3 class="text-2xl font-bold text-center mb-2 text-blue-600">
+            Basic
+          </h3>
+          <p class="text-center text-gray-700 mb-4">
+            เหมาะสำหรับผู้เริ่มต้นและธุรกิจขนาดเล็ก
+          </p>
+          <div class="text-center text-4xl font-bold text-blue-700 mb-4">
+            $29<span class="text-lg">/mo</span>
+          </div>
+          <ul class="mb-6 space-y-2 text-gray-600">
+            <li>- Web Hosting & Domain</li>
+            <li>- Basic Security</li>
+            <li>- 10 Email Accounts</li>
+            <li>- 24/7 Support</li>
+          </ul>
+          <a
+            href="#contact"
+            class="mt-auto block text-center bg-blue-600 text-white py-2 rounded-full hover:bg-blue-500 transition-colors font-semibold"
+          >
+            Get Started
+          </a>
+        </div>
+
+        <!-- Standard Plan -->
+        <div
+          class="bg-white rounded-lg shadow-md p-6 border-4 border-blue-600 flex flex-col"
+        >
+          <h3 class="text-2xl font-bold text-center mb-2 text-blue-600">
+            Standard
+          </h3>
+          <p class="text-center text-gray-700 mb-4">
+            ดีที่สุดสำหรับธุรกิจระดับกลาง
+          </p>
+          <div class="text-center text-4xl font-bold text-blue-700 mb-4">
+            $69<span class="text-lg">/mo</span>
+          </div>
+          <ul class="mb-6 space-y-2 text-gray-600">
+            <li>- Everything in Basic</li>
+            <li>- Cloud Integration</li>
+            <li>- Enhanced Security</li>
+            <li>- 50 Email Accounts</li>
+            <li>- Priority Support</li>
+          </ul>
+          <a
+            href="#contact"
+            class="mt-auto block text-center bg-blue-600 text-white py-2 rounded-full hover:bg-blue-500 transition-colors font-semibold"
+          >
+            Get Started
+          </a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+          <h3 class="text-2xl font-bold text-center mb-2 text-blue-600">
+            Premium
+          </h3>
+          <p class="text-center text-gray-700 mb-4">
+            สำหรับองค์กรที่ต้องการโซลูชันแบบครบวงจร
+          </p>
+          <div class="text-center text-4xl font-bold text-blue-700 mb-4">
+            $129<span class="text-lg">/mo</span>
+          </div>
+          <ul class="mb-6 space-y-2 text-gray-600">
+            <li>- Everything in Standard</li>
+            <li>- Advanced AI & ML Services</li>
+            <li>- Custom Deployment</li>
+            <li>- Unlimited Email Accounts</li>
+            <li>- Dedicated Support</li>
+          </ul>
+          <a
+            href="#contact"
+            class="mt-auto block text-center bg-blue-600 text-white py-2 rounded-full hover:bg-blue-500 transition-colors font-semibold"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container mx-auto mt-16 px-4">
+      <div class="text-center mb-10 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Meet Our Team
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          ทีมงานมืออาชีพของเรา
+          พร้อมสร้างสรรค์นวัตกรรมและโซลูชันที่ตอบโจทย์ธุรกิจของคุณ
+          ด้วยความเชี่ยวชาญและประสบการณ์จริง
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 fade-in">
+        <!-- Member 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img
+            src="customer1.jpg"
+            alt="John Doe"
+            class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
+          />
+          <h3 class="text-xl font-bold text-center">John Doe</h3>
+          <p class="text-gray-600 text-center mb-2">CEO & Founder</p>
+          <p class="text-sm text-gray-500 text-center">
+            ผู้ก่อตั้งและผู้นำทีมที่พร้อมผลักดันไอเดียใหม่ ๆ
+            ให้เกิดขึ้นได้อย่างแท้จริง
+          </p>
+        </div>
+        <!-- Member 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img
+            src="customer2.jpg"
+            alt="Jane Smith"
+            class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
+          />
+          <h3 class="text-xl font-bold text-center">Jane Smith</h3>
+          <p class="text-gray-600 text-center mb-2">CTO</p>
+          <p class="text-sm text-gray-500 text-center">
+            ดูแลการวางระบบเทคโนโลยีและสถาปัตยกรรมต่าง ๆ
+            พร้อมสร้างมาตรฐานในระดับองค์กร
+          </p>
+        </div>
+        <!-- Member 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img
+            src="Emily-74.jpg"
+            alt="Emily Johnson"
+            class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
+          />
+          <h3 class="text-xl font-bold text-center">Emily Johnson</h3>
+          <p class="text-gray-600 text-center mb-2">Project Manager</p>
+          <p class="text-sm text-gray-500 text-center">
+            คอยบริหารจัดการโครงการเทคโนโลยีตั้งแต่ต้นจนจบ
+            เพื่อให้ถึงเป้าหมายตามกำหนด
+          </p>
+        </div>
+        <!-- Member 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img
+            src="Michael Brown.jpg"
+            alt="Michael Brown"
+            class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
+          />
+          <h3 class="text-xl font-bold text-center">Michael Brown</h3>
+          <p class="text-gray-600 text-center mb-2">Lead Developer</p>
+          <p class="text-sm text-gray-500 text-center">
+            ผู้เชี่ยวชาญด้านการพัฒนา Software Architecture
+            และการเขียนโค้ดระดับองค์กร
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="bg-blue-800 text-white p-10 text-center mt-16 fade-in"
+      id="cta"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Ready to Elevate Your Business?
+      </h2>
+      <p class="text-lg mb-6 max-w-xl mx-auto">
+        ก้าวนำคู่แข่งของคุณ ด้วยโซลูชันเทคโนโลยีที่โดดเด่น
+        และทีมงานผู้เชี่ยวชาญของเรา
+      </p>
+      <a
+        href="#contact"
+        class="bg-white text-blue-800 hover:text-blue-900 transition-colors px-6 py-3 rounded-full font-bold"
+      >
+        Get in Touch
+      </a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container mx-auto mt-16 px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-700 fade-in">
+        What Our Clients Say
+      </h2>
+      <p class="text-gray-700 text-center max-w-xl mx-auto mb-12 fade-in">
+        เราภูมิใจในคุณภาพของบริการและโซลูชันที่เราพัฒนา
+        นี่คือเสียงสะท้อนจากลูกค้าบางส่วนที่เลือกไว้วางใจเรา
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-600 italic">
+            "ประทับใจในความเชี่ยวชาญของทีมงาน TechVision
+            ระบบ Cloud ที่พัฒนาให้เรามีความเสถียรสูง และยืดหยุ่นมาก"
+          </p>
+          <h3 class="text-xl font-bold mt-4">- John Doe</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-600 italic">
+            "ทีม DevOps ทำงานได้ไวมาก
+            โครงการของเราถูกส่งมอบตรงเวลาและเกินความคาดหมาย"
+          </p>
+          <h3 class="text-xl font-bold mt-4">- Jane Smith</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-600 italic">
+            "ถ้าไม่ได้ TechVision เราคงไม่ได้เห็นประโยชน์ของ AI
+            ในการวิเคราะห์ข้อมูลเชิงลึก
+            ช่วยลดต้นทุนและปรับกลยุทธ์ได้อย่างมีประสิทธิภาพ"
+          </p>
+          <h3 class="text-xl font-bold mt-4">- Emily Johnson</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container mx-auto mt-16 px-4">
+      <h2
+        class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-700 fade-in"
+      >
+        Frequently Asked Questions
+      </h2>
+      <p class="text-gray-700 text-center max-w-xl mx-auto mb-8 fade-in">
+        อยากรู้ข้อมูลเพิ่มเติมหรือไม่?  
+        ลองดูคำถามที่พบบ่อยด้านล่างนี้
+        หากยังไม่ได้คำตอบ สามารถติดต่อเราได้โดยตรง
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="font-semibold mb-2">
+            Q: บริการของ TechVision รองรับธุรกิจขนาดเล็กไหม?
+          </h3>
+          <p class="text-gray-600">
+            A: แน่นอน เรามีแพ็กเกจเริ่มต้นที่ราคาเหมาะสม
+            สำหรับผู้ประกอบการรายย่อยและสตาร์ทอัพ
+          </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="font-semibold mb-2">
+            Q: ต้องการระยะเวลาในการพัฒนาโปรเจกต์นานแค่ไหน?
+          </h3>
+          <p class="text-gray-600">
+            A: ขึ้นอยู่กับความซับซ้อนของโครงการ
+            โดยปกติจะตั้งแต่ 2 สัปดาห์จนถึงหลายเดือน
+          </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="font-semibold mb-2">
+            Q: สามารถปรับแต่งแพ็กเกจบริการได้หรือไม่?
+          </h3>
+          <p class="text-gray-600">
+            A: ได้ เรามีทีมให้คำปรึกษา
+            และยินดีปรับแก้บริการให้เหมาะสมกับความต้องการเฉพาะของธุรกิจคุณ
+          </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="font-semibold mb-2">Q: มีการ Training หรือ Workshop ไหม?</h3>
+          <p class="text-gray-600">
+            A: เรามีบริการเทรนนิ่งทั้งภายในองค์กรและในรูปแบบออนไลน์
+            เพื่อให้ทีมของคุณสามารถใช้งานระบบได้อย่างเต็มประสิทธิภาพ
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="container mx-auto mt-16 px-4 mb-16 fade-in"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-700">
+        Get in Touch
+      </h2>
+      <p class="text-gray-700 text-center max-w-xl mx-auto mb-8">
+        ต้องการข้อมูลเพิ่มเติม หรือต้องการเริ่มต้นโครงการใหม่?
+        ติดต่อเราได้ทันทีผ่านฟอร์มด้านล่าง
+      </p>
+      <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label
+              for="name"
+              class="block text-gray-700 font-medium mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block text-gray-700 font-medium mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="message"
+              class="block text-gray-700 font-medium mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-500 transition-colors font-semibold"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 p-6 mt-auto">
+      <div class="container mx-auto text-center fade-in">
+        <div class="mb-2">
+          <p class="text-sm">
+            &copy; 2024 TechVision. All rights reserved.
+          </p>
+        </div>
+        <!-- Social Links (Optional) -->
+        <div class="flex justify-center space-x-4 mt-4">
+          <a
+            href="#"
+            class="hover:text-white transition-colors"
+            aria-label="Facebook"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22.675 0H1.325C.594 0 0 .593 0 1.326v21.348C0 23.406.594 24 1.325 24h11.495v-9.294H9.691v-3.62h3.129V8.413c0-3.1 1.892-4.788 4.66-4.788 1.325 0 2.464.099 2.795.143v3.24h-1.917c-1.504 0-1.796.716-1.796 1.765v2.315h3.59l-.467 3.62h-3.123V24h6.127c.73 0 1.325-.594 1.325-1.326V1.326C24 .593 23.406 0 22.675 0z"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="hover:text-white transition-colors"
+            aria-label="Twitter"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.936.555-1.97.959-3.073 1.184a4.916 4.916 0 00-8.384 4.483A13.955 13.955 0 011.671 3.149a4.902 4.902 0 001.523 6.543 4.915 4.915 0 01-2.224-.616v.06a4.917 4.917 0 003.946 4.827 4.935 4.935 0 01-2.212.085 4.918 4.918 0 004.59 3.417A9.867 9.867 0 010 19.54a13.896 13.896 0 007.548 2.212c9.057 0 14.01-7.504 14.01-14.01 0-.213-.005-.426-.014-.637A9.926 9.926 0 0024 4.557z"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="hover:text-white transition-colors"
+            aria-label="LinkedIn"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.762 0-5 2.238-5 5v14c0 2.762 2.238 5 5 5h14c2.761 0 5-2.238 5-5v-14c0-2.762-2.239-5-5-5zm-11.534 19h-2.993v-9h2.993v9zm-1.496-10.293c-.957 0-1.733-.777-1.733-1.734 0-.957.776-1.734 1.733-1.734s1.733.777 1.733 1.734c0 .957-.776 1.734-1.733 1.734zm11.53 10.293h-2.992v-4.981c0-1.189-.025-2.718-1.656-2.718-1.658 0-1.91 1.296-1.91 2.634v5.065h-2.993v-9h2.873v1.229h.041c.401-.76 1.381-1.562 2.842-1.562 3.04 0 3.601 2.003 3.601 4.607v4.726z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Basic Toggle Menu Script (Optional) -->
+    <script>
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
