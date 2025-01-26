@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -7,21 +7,36 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>TechVision - Future of Technology</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="TechVision - Future of Technology" />
+    <meta
+      name="description"
+      content="TechVision บริษัทเทคโนโลยีผู้ช่วยธุรกิจให้เติบโตอย่างยั่งยืน ด้วยนวัตกรรมล้ำสมัยและทีมงานผู้เชี่ยวชาญ"
+    />
+
     <!-- Tailwind CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <!-- Google Fonts (Optional) -->
+
+    <!-- Google Fonts: Prompt -->
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Custom Style (Optional for extra animations) -->
+
+    <!-- Custom Styles & Animations -->
     <style>
       body {
         font-family: "Prompt", sans-serif;
       }
+
       /* Fade-in animation (custom) */
       @keyframes fadeIn {
         0% {
@@ -269,7 +284,9 @@
         <div
           class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
         >
+          <!-- เพิ่ม loading="lazy" เพื่อให้ภาพโหลดเฉพาะเมื่อใกล้เข้ามาใน viewport -->
           <img
+            loading="lazy"
             src="Software.jpg"
             alt="Software Development"
             class="w-full h-48 object-cover rounded-t-lg"
@@ -285,6 +302,7 @@
           class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
         >
           <img
+            loading="lazy"
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80"
             alt="Cloud Integration"
             class="w-full h-48 object-cover rounded-t-lg"
@@ -300,6 +318,7 @@
           class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
         >
           <img
+            loading="lazy"
             src="AI.jpg"
             alt="AI & Machine Learning"
             class="w-full h-48 object-cover rounded-t-lg"
@@ -315,6 +334,7 @@
           class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
         >
           <img
+            loading="lazy"
             src="Cybersecurity.jpg"
             alt="Cybersecurity"
             class="w-full h-48 object-cover rounded-t-lg"
@@ -330,6 +350,7 @@
           class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
         >
           <img
+            loading="lazy"
             src="IT Consulting.jpg"
             alt="IT Consulting"
             class="w-full h-48 object-cover rounded-t-lg"
@@ -345,6 +366,7 @@
           class="bg-white rounded-lg shadow-md p-6 transform transition hover:scale-105"
         >
           <img
+            loading="lazy"
             src="Data Analytics.jpg"
             alt="Data Analytics"
             class="w-full h-48 object-cover rounded-t-lg"
@@ -606,6 +628,7 @@
         <!-- Member 1 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
           <img
+            loading="lazy"
             src="customer1.jpg"
             alt="John Doe"
             class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
@@ -620,6 +643,7 @@
         <!-- Member 2 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
           <img
+            loading="lazy"
             src="customer2.jpg"
             alt="Jane Smith"
             class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
@@ -634,6 +658,7 @@
         <!-- Member 3 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
           <img
+            loading="lazy"
             src="Emily-74.jpg"
             alt="Emily Johnson"
             class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
@@ -648,6 +673,7 @@
         <!-- Member 4 -->
         <div class="bg-white p-6 rounded-lg shadow-md">
           <img
+            loading="lazy"
             src="Michael Brown.jpg"
             alt="Michael Brown"
             class="w-32 h-32 mx-auto object-cover rounded-full mb-4"
